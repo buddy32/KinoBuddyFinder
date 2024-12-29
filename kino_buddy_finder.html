@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="de"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;KinoBuddy Finder&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1b1b1b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #eaeaea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 700px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 50px auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #2a2a2a, #1b1b1b);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #444;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f5c518;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Verdana', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.quiz-question {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #eaeaea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.answer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s, transform 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f5c518;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.answer:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f5c518;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1b1b1b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.05);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.match-message {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.8em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 30px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.restart-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f5c518;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #1b1b1b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.restart-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e4b413;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #eaeaea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: calc(100% - 20px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #444;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #eaeaea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-messages {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-height: 200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-message {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 5px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f5c518;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-message.user {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #444;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;KinoBuddy Finder&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="text-align: center;"&gt;Nie wieder alleine ins Kino! Finde Filmfans in deiner Nähe, die deinen Geschmack teilen.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="question" class="quiz-question"&gt;Frage wird geladen...&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="answers"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="matchMessage" class="match-message" style="display:none;"&gt;Wir haben einen KinoBuddy für dich gefunden! Starte einen Chat:&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="chat-box" id="chatBox"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="chat-messages" id="chatMessages"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="chatInput" class="chat-input" placeholder="Nachricht eingeben..."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="restart" class="restart-btn" style="display:none;"&gt;Quiz neu starten&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const allQuizData = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Welche Art von Filmen siehst du am liebsten?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Action", "Komödie", "Drama", "Horror"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Welches Popcorn bevorzugst du im Kino?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Süß", "Salzig", "Beides", "Keins"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Wie oft gehst du ins Kino?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Einmal pro Woche", "Einmal pro Monat", "Selten", "Fast nie"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Was ist dein Lieblingssitzplatz im Kino?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Vorne", "Mitte", "Hinten", "Egal"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Welcher Film hat dich zuletzt begeistert?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Avatar 2", "Dune", "Top Gun: Maverick", "Ein Indie-Film"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Gehst du lieber alleine oder in einer Gruppe ins Kino?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Alleine", "Mit einer Person", "In einer Gruppe", "Es kommt darauf an"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Welches Kino ist dein Lieblingskino?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Cineplex", "UCI", "Cinemaxx", "Ein kleines Arthouse-Kino"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Welchen Film würdest du sofort nochmal schauen?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Titanic", "Herr der Ringe", "Star Wars", "Parasite"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Welche Sprache bevorzugst du bei Filmen?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Deutsch", "Englisch", "Original mit Untertiteln", "Egal"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "Welches Genre kannst du nicht ausstehen?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: ["Romantik", "Horror", "Fantasy", "Science Fiction"]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let quizData = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const usersAnswers = [];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let userLocation = null;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const userPool = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function shuffleArray(array) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let i = array.length - 1; i &gt; 0; i--) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const j = Math.floor(Math.random() * (i + 1));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>[array[i], array[j]] = [array[j], array[i]];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function getUserLocation() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (navigator.geolocation) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>navigator.geolocation.getCurrentPosition(</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>(position) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>userLocation = {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>latitude: position.coords.latitude,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>longitude: position.coords.longitude</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>console.log("User location retrieved:", userLocation);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>(error) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>console.error("Error retrieving location:", error);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>alert("Standort konnte nicht abgerufen werden. Die Match-Funktion wird eingeschränkt.");</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert("Geolocation wird von deinem Browser nicht unterstützt.");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function displayQuestion(index) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const questionElement = document.getElementById('question');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const answersElement = document.getElementById('answers');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (index &gt;= quizData.length) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>addToUserPool();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const { question, answers } = quizData[index];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>questionElement.textContent = question;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>answersElement.innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>answers.forEach(answer =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const answerElement = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answerElement.textContent = answer;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answerElement.classList.add('answer');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answerElement.onclick = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>usersAnswers.push(answer);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>displayQuestion(index + 1);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answersElement.appendChild(answerElement);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function addToUserPool() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const userData = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>answers: usersAnswers,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>location: userLocation,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>timestamp: new Date()</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p1"><span class="Apple-converted-space">            </span>userPool.push(userData);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>console.log("User added to pool:", userData);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const matchedUser = findMatch(userData);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (matchedUser) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayMatch();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert("Kein KinoBuddy gefunden. Du bleibst im Pool und wirst bald gematcht!");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function findMatch(newUser) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let user of userPool) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (user !== newUser &amp;&amp; user.answers.join() === newUser.answers.join()) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return user;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return null;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function displayMatch() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('quiz').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('matchMessage').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('chatBox').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('restart').onclick = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>usersAnswers.length = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>quizData = [];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>initializeQuiz();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('quiz').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('matchMessage').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('chatBox').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('chatMessages').innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>displayQuestion(0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const chatInput = document.getElementById('chatInput');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const chatMessages = document.getElementById('chatMessages');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>chatInput.addEventListener('keypress', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (e.key === 'Enter' &amp;&amp; chatInput.value.trim() !== '') {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const message = chatInput.value;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const messageElement = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>messageElement.textContent = message;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>messageElement.classList.add('chat-message');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>chatMessages.appendChild(messageElement);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>chatInput.value = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function initializeQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>quizData = [...allQuizData];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>shuffleArray(quizData);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>quizData = quizData.slice(0, 10);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Start the quiz</p>
+<p class="p1"><span class="Apple-converted-space">        </span>getUserLocation();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>initializeQuiz();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>displayQuestion(0);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
